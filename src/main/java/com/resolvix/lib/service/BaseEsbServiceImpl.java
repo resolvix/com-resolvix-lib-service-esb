@@ -11,12 +11,12 @@ public class BaseEsbServiceImpl
         super();
     }
 
-    private <Q, R> R execute(
-            Class<BaseEsbServiceRequestHandlerImpl<Q, R, ?>> handlerClass,
+    protected <Q, R, C, H extends BaseEsbServiceRequestHandlerImpl<Q, R, C>> R execute(
+            Class<? extends BaseEsbServiceRequestHandlerImpl<Q, R, C>> handlerClass,
             Q request)
         throws Exception
     {
-        BaseEsbServiceRequestHandlerImpl<Q, R, ?> handler
+        BaseEsbServiceRequestHandlerImpl<Q, R, C> handler
             = handlerClass.newInstance();
         return handler.execute(request);
     }
