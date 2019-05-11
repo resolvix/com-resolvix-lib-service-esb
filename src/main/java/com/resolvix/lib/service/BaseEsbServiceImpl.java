@@ -8,6 +8,16 @@ public class BaseEsbServiceImpl
 {
 
     protected BaseEsbServiceImpl() {
-        //
+        super();
+    }
+
+    private <Q, R> R execute(
+            Class<BaseEsbServiceRequestHandlerImpl<Q, R, ?>> handlerClass,
+            Q request)
+        throws Exception
+    {
+        BaseEsbServiceRequestHandlerImpl<Q, R, ?> handler
+            = handlerClass.newInstance();
+        return handler.execute(request);
     }
 }
