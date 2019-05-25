@@ -1,7 +1,6 @@
 package com.resolvix.lib.service.api;
 
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
 public class ServiceFaultMaplet<C, F extends ServiceFault, E extends Exception> {
 

@@ -1,4 +1,6 @@
-package com.resolvix.lib.service;
+package com.resolvix.lib.service.esb;
+
+import com.resolvix.lib.service.BaseServiceImpl;
 
 /**
  * Base implementation of an ESB -compatible service.

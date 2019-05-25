@@ -1,4 +1,4 @@
-package com.resolvix.lib.service;
+package com.resolvix.lib.service.esb;
 
 import com.resolvix.lib.service.api.ServiceFault;
 import com.resolvix.lib.service.api.ServiceFaultMaplet;

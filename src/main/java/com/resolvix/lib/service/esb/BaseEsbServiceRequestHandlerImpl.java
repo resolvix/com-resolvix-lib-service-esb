@@ -1,6 +1,7 @@
-package com.resolvix.lib.service;
+package com.resolvix.lib.service.esb;
 
 import com.google.common.base.Preconditions;
+import com.resolvix.lib.service.BaseServiceRequestHandlerImpl;
 import com.resolvix.lib.service.api.ServiceException;
 import com.resolvix.lib.service.api.ServiceFault;
 
