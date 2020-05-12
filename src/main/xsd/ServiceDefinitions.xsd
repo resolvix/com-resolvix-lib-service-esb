@@ -4,16 +4,18 @@
         id="ServiceDefinitions"
         targetNamespace="http://soa.resolvix.com/ServiceDefinitions/"
         xmlns:tns="http://soa.resolvix.com/ServiceDefinitions/">
+
+    <xsd:element name="RequestHeader" type="tns:RequestHeader" />
     <xsd:complexType name="RequestHeader">
         <xsd:all>
             <xsd:element name="requestId" type="xsd:string" />
         </xsd:all>
     </xsd:complexType>
+
+    <xsd:element name="ResponseHeader" type="tns:ResponseHeader" />
     <xsd:complexType name="ResponseHeader">
         <xsd:all>
             <xsd:element name="responseId" type="xsd:string" />
         </xsd:all>
     </xsd:complexType>
-    <xsd:element name="RequestHeader" type="tns:RequestHeader" />
-    <xsd:element name="ResponseHeader" type="tns:ResponseHeader" />
 </xsd:schema>
