@@ -1,7 +1,7 @@
 package com.resolvix.lib.service.esb.builder;
 
 import com.resolvix.lib.service.builder.BaseElementBuilder;
-import com.resolvix.soa.RequestHeader;
+import com.resolvix.soa.servicedefinitions.RequestHeader;
 
 /**
  * A base implementation of a builder for a {@link RequestHeader} relevant
