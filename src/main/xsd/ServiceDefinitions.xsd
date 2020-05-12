@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://soa.resolvix.com/servicedefinitions/"
-        xmlns:tns="http://soa.resolvix.com/servicedefinitions/">
+        id="ServiceDefinitions"
+        targetNamespace="http://soa.resolvix.com/ServiceDefinitions/"
+        xmlns:tns="http://soa.resolvix.com/ServiceDefinitions/">
     <xsd:complexType name="RequestHeader">
         <xsd:all>
             <xsd:element name="requestId" type="xsd:string" />
@@ -13,4 +14,6 @@
             <xsd:element name="responseId" type="xsd:string" />
         </xsd:all>
     </xsd:complexType>
+    <xsd:element name="RequestHeader" type="tns:RequestHeader" />
+    <xsd:element name="ResponseHeader" type="tns:ResponseHeader" />
 </xsd:schema>
