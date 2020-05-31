@@ -1,24 +1,24 @@
-package com.resolvix.lib.service.esb;
+package com.resolvix.lib.javax.jax.ws.service.esb;
 
-import com.resolvix.lib.service.api.ServiceFault;
-import com.resolvix.lib.service.api.ServiceFaultMaplet;
+import com.resolvix.lib.javax.jax.ws.service.api.ServiceFault;
+import com.resolvix.lib.javax.jax.ws.service.api.ServiceFaultMaplet;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiFunction;
 
-public class ServiceFaultMap {
+public class EsbWsServiceFaultMap {
 
     protected Map<Class<? extends ServiceFault>, BiFunction<?, ? extends ServiceFault, ? extends Exception>> serviceFaultExceptionMap;
 
-    private ServiceFaultMap(
+    private EsbWsServiceFaultMap(
         Map<Class<? extends ServiceFault>, BiFunction<?, ? extends ServiceFault, ? extends Exception>> serviceFaultExceptionMap
     ) {
         this.serviceFaultExceptionMap = serviceFaultExceptionMap;
     }
 
-    public static final ServiceFaultMap of(
+    public static final EsbWsServiceFaultMap of(
         List<ServiceFaultMaplet<?, ?, ?>> serviceFaultMaplets) {
         Map<Class<? extends ServiceFault>, BiFunction<?, ? extends ServiceFault, ? extends Exception>> serviceFaultExceptionMap
             = new HashMap<>();
@@ -29,7 +29,7 @@ public class ServiceFaultMap {
                     m.getServiceFaultTransformer()
                 );
             });
-        return new ServiceFaultMap(serviceFaultExceptionMap);
+        return new EsbWsServiceFaultMap(serviceFaultExceptionMap);
     }
 
     public <C, F extends ServiceFault, E extends Exception> E map(C c, F serviceFault) {

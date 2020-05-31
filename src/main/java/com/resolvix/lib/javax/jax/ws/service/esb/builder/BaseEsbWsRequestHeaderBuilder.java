@@ -1,6 +1,6 @@
-package com.resolvix.lib.service.esb.builder;
+package com.resolvix.lib.javax.jax.ws.service.esb.builder;
 
-import com.resolvix.lib.service.builder.BaseElementBuilder;
+import com.resolvix.lib.javax.jax.ws.service.builder.BaseWsElementBuilder;
 import com.resolvix.soa.servicedefinitions.RequestHeader;
 
 /**
@@ -10,12 +10,12 @@ import com.resolvix.soa.servicedefinitions.RequestHeader;
  * @param <S> the request header builder sub-type
  * @param <R> the return type
  */
-public abstract class BaseRequestHeaderBuilder<S extends BaseRequestHeaderBuilder<S, R>, R>
-    extends BaseElementBuilder<S, R> {
+public abstract class BaseEsbWsRequestHeaderBuilder<S extends BaseEsbWsRequestHeaderBuilder<S, R>, R>
+    extends BaseWsElementBuilder<S, R> {
 
     private RequestHeader requestHeader;
 
-    protected BaseRequestHeaderBuilder(
+    protected BaseEsbWsRequestHeaderBuilder(
         RequestHeader requestHeader
     ) {
         super();
