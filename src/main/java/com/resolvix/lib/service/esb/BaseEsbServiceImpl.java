@@ -16,7 +16,7 @@ public class BaseEsbServiceImpl
     protected <Q, R, C, H extends BaseEsbServiceRequestHandlerImpl<Q, R, C>> R execute(
             Class<? extends BaseEsbServiceRequestHandlerImpl<Q, R, C>> handlerClass,
             Q request)
-        throws Exception
+        throws Throwable
     {
         BaseEsbServiceRequestHandlerImpl<Q, R, C> handler
             = handlerClass.newInstance();
