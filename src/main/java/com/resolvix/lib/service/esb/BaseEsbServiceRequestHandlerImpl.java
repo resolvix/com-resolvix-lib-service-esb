@@ -2,8 +2,8 @@ package com.resolvix.lib.service.esb;
 
 import com.google.common.base.Preconditions;
 import com.resolvix.lib.service.BaseServiceRequestHandlerImpl;
-import com.resolvix.lib.service.api.ServiceException;
-import com.resolvix.lib.service.api.ServiceFault;
+import com.resolvix.lib.service.esb.api.EsbServiceException;
+import com.resolvix.lib.service.esb.api.EsbServiceFault;
 
 /**
  * Base implementation of an ESB -compatible service request handler.
@@ -21,7 +21,7 @@ public abstract class BaseEsbServiceRequestHandlerImpl<Q, R, C>
 
     @Override
     protected void validate(C c)
-        throws ServiceException, ServiceFault
+        throws EsbServiceException, EsbServiceFault
     {
         Preconditions.checkArgument(c != null);
     }

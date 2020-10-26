@@ -19,6 +19,7 @@
         <!-- Implementation dependencies -->
         <com-google-guava.version>26.0-jre</com-google-guava.version>
 
+        <com-resolvix-lib-esb.version>0.0.1-SNAPSHOT</com-resolvix-lib-esb.version>
         <com-resolvix-lib-service.version>0.0.1-SNAPSHOT</com-resolvix-lib-service.version>
 
         <!-- Unit test dependencies -->
@@ -33,6 +34,13 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${com-google-guava.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.resolvix</groupId>
+            <artifactId>lib-esb</artifactId>
+            <version>${com-resolvix-lib-esb.version}</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
